@@ -1,0 +1,456 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap");
+
+.imagem-rosto,
+.text-carousel {
+  position: absolute;
+  left: 0px;
+}
+
+.imagem-rosto {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  object-position: -10% 80%;
+  border-radius: 50%;
+  border: 3px solid #808080;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  z-index: 2;
+  top: 200px;
+  left: 150px;
+  margin-top: 0;
+  margin-bottom: 4px;
+}
+/* Configuração da Minha foto */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: clamp(34px, 6vw, 46px);
+  font-weight: 100;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(
+    135deg,
+    #f5f7fa 0%,
+    #c3cfe2 25%,
+    #667eea 50%,
+    #764ba2 100%
+  );
+  transition: all 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  position: relative;
+}
+
+header {
+  background-color: #3498db;
+  color: white;
+  padding: 20px;
+}
+
+main {
+  padding: 20px;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.box {
+  background-color: #eee;
+  padding: 20px;
+  margin: 10px 0;
+}
+
+@media (min-width: 768px) {
+  .flex-row {
+    display: flex;
+    gap: 20px;
+  }
+
+  .box {
+    flex: 1;
+  }
+}
+/* Para deixar a Página Responsiva */
+
+.menu-superior {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 51, 102, 0);
+  z-index: 1000;
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-superior ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-superior li {
+  margin: 0 20px;
+  display: flex;
+  align-items: center;
+}
+
+.menu-superior a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 20px 0;
+  display: block;
+  transition: color 0.3s;
+}
+
+/* Configuração da Borda Superior */
+
+.logo-gmail {
+  width: 38px;
+  height: 38px;
+}
+
+.logo-github {
+  width: 38px;
+  height: 38px;
+}
+
+.logo-linkedin {
+  width: 30px;
+  height: 30px;
+}
+/* Configuração das Logos do menu superior */
+
+.container-retangulos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 40px;
+}
+.mini-retangulo {
+  width: 90vw;
+  max-width: 200px;
+  height: 40vw;
+  max-height: 320px;
+  background: rgba(1, 24, 48, 0.5);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+  .mini-retangulo {
+    width: 95vw;
+    max-width: 95vw;
+    height: auto;
+    max-height: auto;
+    padding: 8px;
+  }
+  .imagem-rosto {
+    left: 50px;
+    top: -10px;
+    width: 100px;
+    height: 100px;
+  }
+  .text-carousel {
+    top: 110px;
+    left: 4px;
+  }
+  .dropping-texts {
+    width: clamp(10ch, 80vw, 14ch);
+    height: 2em;
+  }
+  .dropping-texts > div {
+    font-size: clamp(1rem, 4vw, 1.5rem);
+  }
+  .static-text {
+    font-size: clamp(1.2rem, 5vw, 2rem);
+  }
+}
+
+@media (max-width: 400px) {
+  .text-carousel {
+    top: 80px;
+    left: 2px;
+  }
+  .dropping-texts {
+    width: clamp(8ch, 90vw, 12ch);
+    height: 1.8em;
+  }
+  .dropping-texts > div {
+    font-size: clamp(0.9rem, 5vw, 1.3rem);
+  }
+  .static-text {
+    font-size: clamp(1rem, 6vw, 1.8rem);
+  }
+}
+
+.mini-retangulo:hover {
+  transform: perspective(500px) rotateY(8deg) rotateX(6deg) scale(1.2);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3);
+}
+/* Configuração dos Cards de Informação */
+
+.retangulo-interno {
+  width: 200px;
+  height: 320px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+/* Configuração do retangulo interno */
+
+/* Configuração do texto animado */
+.text-carousel {
+  position: relative;
+  top: 100px;
+  left: -350px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.static-text {
+  white-space: nowrap;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.dropping-texts {
+  display: inline-block;
+  position: relative;
+  height: 2.5em;
+  width: clamp(12ch, 20vw, 16ch);
+  overflow: hidden;
+  text-align: center;
+}
+
+.dropping-texts > div {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  font-size: clamp(1.2rem, 3vw, 2rem);
+  font-weight: 700;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 4px 24px rgba(118, 75, 162, 0.3);
+  transform: translateY(40px) scale(0.95);
+  animation: slideText 8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.dropping-texts > div:nth-child(1) {
+  animation-delay: 0s;
+}
+.dropping-texts > div:nth-child(2) {
+  animation-delay: 2s;
+}
+.dropping-texts > div:nth-child(3) {
+  animation-delay: 4s;
+}
+.dropping-texts > div:nth-child(4) {
+  animation-delay: 6s;
+}
+
+@keyframes slideText {
+  0% {
+    opacity: 0;
+    transform: translateY(100%) scale(0.95);
+  }
+  5% {
+    opacity: 1;
+    transform: translateY(0%) scale(1);
+  }
+  25% {
+    opacity: 1;
+    transform: translateY(0%) scale(1);
+  }
+  30% {
+    opacity: 0;
+    transform: translateY(-100%) scale(0.95);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100%) scale(0.95);
+  }
+}
+
+/* Botão de toggle de tema */
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.theme-toggle:active {
+  transform: translateY(0px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Modo escuro */
+body.dark-mode {
+  background: linear-gradient(135deg, #181c2f 0%, #5a5ca4 50%, #6ec3f4 100%);
+  color: #fff;
+}
+
+body.dark-mode .mini-retangulo {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .retangulo-interno {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .menu-superior {
+  background: rgba(255, 255, 255, 0);
+}
+
+/* Efeito durante a transição */
+body.transitioning {
+  transform: scale(1.02);
+  filter: brightness(1.1);
+}
+
+body.transitioning .text-carousel {
+  animation: pulse 1.2s ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 0;
+  z-index: -1; /* ou 1, dependendo do contexto */
+  pointer-events: none;
+  background: var(--next-gradient, none);
+  transition: height 1s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.2s;
+  opacity: 1;
+}
+
+body.theme-transition::before {
+  height: 100vh;
+}
+
+/* CABEÇALHO PARA PAGINA RESPONSIVA*/
+@media screen and (max-width: 1900px) {
+  /* Reset do body */
+  body {
+    overflow: auto !important;
+    min-height: auto !important;
+    height: auto !important;
+    display: block !important;
+    justify-content: normal !important;
+    align-items: normal !important;
+  }
+
+  /* Container flex principal - APENAS quando tela menor */
+  .flex.responsive {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 30px !important;
+    width: 100% !important;
+    min-height: 100vh !important;
+    padding: 50px 20px !important;
+    position: relative !important;
+  }
+
+  /* Reset da imagem - APENAS quando tela menor */
+  .flex.responsive .imagem-rosto {
+    position: relative !important;
+    top: -100px !important;
+    left: -20px !important;
+    margin: 0 !important;
+    margin-top: 50px !important;
+    width: 200px !important;
+    height: 200px !important;
+  }
+
+  /* Reset do texto - APENAS quando tela menor */
+  .flex.responsive .text-carousel {
+    position: relative !important;
+    top: -150px !important;
+    left: -20px !important;
+    margin: 0 !important;
+    text-align: center !important;
+    font-size: 20px;
+  }
+
+  /* Container dos retângulos - APENAS quando tela menor */
+  .container-retangulos.responsive {
+    margin-top: -240px !important;
+    width: 100% !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 60px !important;
+  }
+
+  /* Retângulos individuais - APENAS quando tela menor */
+  .mini-retangulo.responsive {
+    width: 280px !important;
+    max-width: 280px !important;
+    height: 250px !important;
+    margin: 0 !important;
+    flex-shrink: 0 !important;
+  }
+}

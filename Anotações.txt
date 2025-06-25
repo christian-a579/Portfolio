@@ -1,0 +1,10 @@
+meu-portfolio/
+├── index.html  # Página principal
+├── css/        # Arquivos de estilo
+│   ├── style.css
+├── js/         # Scripts JavaScript
+│   ├── script.js
+├── img/        # Imagens do projeto
+├── fonts/      # Fontes personalizadas
+├── assets/     # Outros recursos (ícones, vídeos, etc.)
+├── README.md   # Documentação do projeto
