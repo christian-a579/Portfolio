@@ -17,7 +17,7 @@
   position: absolute;
   z-index: 2;
   top: 200px;
-  left: 150px;
+  left: 250px;
   margin-top: 0;
   margin-bottom: 4px;
 }
@@ -223,11 +223,11 @@ main {
 }
 /* Configuração do retangulo interno */
 
-/* Configuração do texto animado */
+/* Configuração do texto animado e do Nome Próprio */
 .text-carousel {
   position: relative;
   top: 100px;
-  left: -350px;
+  left: -250px;
   z-index: 1;
   display: flex;
   flex-direction: column;
@@ -235,8 +235,8 @@ main {
 }
 
 .static-text {
-  white-space: nowrap;
-  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  white-space: normal;
+  font-size: clamp(1.2rem, 3vw, 3.5rem);
 }
 
 .dropping-texts {
@@ -377,7 +377,7 @@ body::before {
   bottom: 0;
   width: 100vw;
   height: 0;
-  z-index: -1; /* ou 1, dependendo do contexto */
+  z-index: -1;
   pointer-events: none;
   background: var(--next-gradient, none);
   transition: height 1s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.2s;
@@ -390,7 +390,6 @@ body.theme-transition::before {
 
 /* CABEÇALHO PARA PAGINA RESPONSIVA*/
 @media screen and (max-width: 1900px) {
-  /* Reset do body */
   body {
     overflow: auto !important;
     min-height: auto !important;
@@ -427,11 +426,19 @@ body.theme-transition::before {
   /* Reset do texto - APENAS quando tela menor */
   .flex.responsive .text-carousel {
     position: relative !important;
-    top: -150px !important;
+    top: -120px !important;
     left: -20px !important;
     margin: 0 !important;
     text-align: center !important;
     font-size: 20px;
+  }
+
+  .flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
   }
 
   /* Container dos retângulos - APENAS quando tela menor */
