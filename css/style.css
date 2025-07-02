@@ -1,7 +1,6 @@
-/* =========================
-   RESET E FONTES
-   ========================= */
+/* Fonte Roboto */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap");
+
 /* Configuração da Minha foto */
 .imagem-rosto,
 .text-carousel {
@@ -84,7 +83,7 @@ main {
   }
 }
 
-/* Configuração da Borda Superior */
+/* Configuração do Menu Superior */
 .menu-superior {
   position: fixed;
   top: 0;
@@ -281,7 +280,7 @@ body.dark-mode .menu-superior {
   background: rgba(255, 255, 255, 0);
 }
 
-/* Efeito durante a transição */
+/* Efeito durante a transição da Página */
 body.transitioning {
   transform: scale(1.02);
   filter: brightness(1.1);
@@ -321,7 +320,7 @@ body.theme-transition::before {
   height: 100vh;
 }
 
-/* CABEÇALHO PARA PAGINA RESPONSIVA*/
+/* Cabeçalho para página responsiva apartir de 1900px*/
 @media screen and (max-width: 1900px) {
   body {
     overflow: auto !important;
@@ -396,9 +395,7 @@ body.theme-transition::before {
   }
 }
 
-/* =========================
-   NOME DESTAQUE
-   ========================= */
+/* Nome Destaque */
 .nome-container {
   margin-bottom: 8px;
   display: flex;
