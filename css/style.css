@@ -1,5 +1,8 @@
+/* =========================
+   RESET E FONTES
+   ========================= */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap");
-
+/* Configuração da Minha foto */
 .imagem-rosto,
 .text-carousel {
   position: absolute;
@@ -21,8 +24,10 @@
   margin-top: 0;
   margin-bottom: 4px;
 }
-/* Configuração da Minha foto */
 
+/* =========================
+   ESTILO GLOBAL DO BODY
+   ========================= */
 body {
   margin: 0;
   padding: 0;
@@ -78,8 +83,8 @@ main {
     flex: 1;
   }
 }
-/* Para deixar a Página Responsiva */
 
+/* Configuração da Borda Superior */
 .menu-superior {
   position: fixed;
   top: 0;
@@ -114,8 +119,7 @@ main {
   transition: color 0.3s;
 }
 
-/* Configuração da Borda Superior */
-
+/* Configuração das Logos do menu superior */
 .logo-gmail {
   width: 38px;
   height: 38px;
@@ -130,8 +134,8 @@ main {
   width: 30px;
   height: 30px;
 }
-/* Configuração das Logos do menu superior */
 
+/* Configuração dos Cards de Informação */
 .container-retangulos {
   display: flex;
   flex-wrap: wrap;
@@ -184,6 +188,12 @@ main {
   .static-text {
     font-size: clamp(1.2rem, 5vw, 2rem);
   }
+  .nome-container {
+    margin-bottom: 6px;
+  }
+  .meu-nome {
+    font-size: clamp(1.2rem, 5vw, 2rem);
+  }
 }
 
 @media (max-width: 400px) {
@@ -207,8 +217,8 @@ main {
   transform: perspective(500px) rotateY(8deg) rotateX(6deg) scale(1.2);
   box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3);
 }
-/* Configuração dos Cards de Informação */
 
+/* Configuração do retangulo interno */
 .retangulo-interno {
   width: 200px;
   height: 320px;
@@ -220,83 +230,6 @@ main {
   align-items: center;
   justify-content: center;
   transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-}
-/* Configuração do retangulo interno */
-
-/* Configuração do texto animado e do Nome Próprio */
-.text-carousel {
-  position: relative;
-  top: 100px;
-  left: -250px;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.static-text {
-  white-space: normal;
-  font-size: clamp(1.2rem, 3vw, 3.5rem);
-}
-
-.dropping-texts {
-  display: inline-block;
-  position: relative;
-  height: 2.5em;
-  width: clamp(12ch, 20vw, 16ch);
-  overflow: hidden;
-  text-align: center;
-}
-
-.dropping-texts > div {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  opacity: 0;
-  font-size: clamp(1.2rem, 3vw, 2rem);
-  font-weight: 700;
-  background: linear-gradient(90deg, #667eea, #764ba2);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-shadow: 0 4px 24px rgba(118, 75, 162, 0.3);
-  transform: translateY(40px) scale(0.95);
-  animation: slideText 8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-}
-
-.dropping-texts > div:nth-child(1) {
-  animation-delay: 0s;
-}
-.dropping-texts > div:nth-child(2) {
-  animation-delay: 2s;
-}
-.dropping-texts > div:nth-child(3) {
-  animation-delay: 4s;
-}
-.dropping-texts > div:nth-child(4) {
-  animation-delay: 6s;
-}
-
-@keyframes slideText {
-  0% {
-    opacity: 0;
-    transform: translateY(100%) scale(0.95);
-  }
-  5% {
-    opacity: 1;
-    transform: translateY(0%) scale(1);
-  }
-  25% {
-    opacity: 1;
-    transform: translateY(0%) scale(1);
-  }
-  30% {
-    opacity: 0;
-    transform: translateY(-100%) scale(0.95);
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(-100%) scale(0.95);
-  }
 }
 
 /* Botão de toggle de tema */
@@ -439,6 +372,7 @@ body.theme-transition::before {
     align-items: center;
     justify-content: center;
     position: relative;
+    top: -50px;
   }
 
   /* Container dos retângulos - APENAS quando tela menor */
@@ -459,5 +393,140 @@ body.theme-transition::before {
     height: 250px !important;
     margin: 0 !important;
     flex-shrink: 0 !important;
+  }
+}
+
+/* =========================
+   NOME DESTAQUE
+   ========================= */
+.nome-container {
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.meu-nome {
+  color: #222;
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  position: absolute;
+  top: 430px;
+  left: 230px;
+}
+
+/* =========================
+   CARROSSEL ANIMADO
+   ========================= */
+.carrossel-container {
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dropping-texts {
+  display: inline-block;
+  position: relative;
+  height: 2.5em;
+  width: clamp(12ch, 20vw, 16ch);
+  overflow: hidden;
+  text-align: center;
+  top: 110px;
+  left: -230px;
+}
+
+.dropping-texts > div {
+  position: absolute;
+  left: -30px;
+  width: 100%;
+  opacity: 0;
+  font-size: clamp(1.2rem, 3vw, 2rem);
+  font-weight: 700;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: translateY(40px) scale(0.95);
+  animation: slideText 8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.dropping-texts > div:nth-child(1) {
+  animation-delay: 0s;
+}
+.dropping-texts > div:nth-child(2) {
+  animation-delay: 2s;
+}
+.dropping-texts > div:nth-child(3) {
+  animation-delay: 4s;
+}
+.dropping-texts > div:nth-child(4) {
+  animation-delay: 6s;
+}
+
+@keyframes slideText {
+  0% {
+    opacity: 0;
+    transform: translateY(100%) scale(0.95);
+  }
+  5% {
+    opacity: 1;
+    transform: translateY(0%) scale(1);
+  }
+  25% {
+    opacity: 1;
+    transform: translateY(0%) scale(1);
+  }
+  30% {
+    opacity: 0;
+    transform: translateY(-100%) scale(0.95);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100%) scale(0.95);
+  }
+}
+
+/* =========================
+   CARDS E RETÂNGULOS
+   ========================= */
+.mini-retangulo:hover {
+  transform: perspective(500px) rotateY(8deg) rotateX(6deg) scale(1.2);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3);
+}
+
+.retangulo-interno {
+  width: 200px;
+  height: 320px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* =========================
+   MEDIA QUERIES (RESPONSIVIDADE)
+   ========================= */
+@media (max-width: 600px) {
+  .dropping-texts {
+    width: clamp(10ch, 80vw, 14ch);
+    height: 2em;
+  }
+  .dropping-texts > div {
+    font-size: clamp(1rem, 4vw, 1.5rem);
+  }
+}
+
+@media (max-width: 400px) {
+  .dropping-texts {
+    width: clamp(8ch, 90vw, 12ch);
+    height: 1.8em;
+  }
+  .dropping-texts > div {
+    font-size: clamp(0.9rem, 5vw, 1.3rem);
   }
 }
