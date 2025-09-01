@@ -174,8 +174,8 @@ main {
     height: 100px;
   }
   .text-carousel {
-    top: 110px;
-    left: 4px;
+    top: 100px;
+    left: auto;
   }
   .dropping-texts {
     width: clamp(10ch, 80vw, 14ch);
@@ -503,27 +503,4 @@ body.theme-transition::before {
   align-items: center;
   justify-content: center;
   transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* =========================
-   MEDIA QUERIES (RESPONSIVIDADE)
-   ========================= */
-@media (max-width: 600px) {
-  .dropping-texts {
-    width: clamp(10ch, 80vw, 14ch);
-    height: 2em;
-  }
-  .dropping-texts > div {
-    font-size: clamp(1rem, 4vw, 1.5rem);
-  }
-}
-
-@media (max-width: 400px) {
-  .dropping-texts {
-    width: clamp(8ch, 90vw, 12ch);
-    height: 1.8em;
-  }
-  .dropping-texts > div {
-    font-size: clamp(0.9rem, 5vw, 1.3rem);
-  }
 }
