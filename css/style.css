@@ -331,7 +331,7 @@ body.theme-transition::before {
     align-items: normal !important;
   }
 
-  /* Container flex principal - APENAS quando tela menor */
+  /* Container flex principal - apenas quando tela menor */
   .flex.responsive {
     display: flex !important;
     flex-direction: column !important;
@@ -344,7 +344,7 @@ body.theme-transition::before {
     position: relative !important;
   }
 
-  /* Reset da imagem - APENAS quando tela menor */
+  /* Reset da imagem - apenas quando tela menor */
   .flex.responsive .imagem-rosto {
     position: relative !important;
     top: -100px !important;
@@ -355,7 +355,7 @@ body.theme-transition::before {
     height: 200px !important;
   }
 
-  /* Reset do texto - APENAS quando tela menor */
+  /* Reset do texto - apenas quando tela menor */
   .flex.responsive .text-carousel {
     position: relative !important;
     top: -120px !important;
