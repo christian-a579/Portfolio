@@ -1,0 +1,68 @@
+@media screen and (max-width: 900px) {
+  html,
+  body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    min-height: 100vh;
+    width: 100vw;
+  }
+  .menu-superior {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 51, 102, 0);
+    z-index: 1000;
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (max-width: 878px) {
+  .theme-toggle {
+    display: none;
+  }
+  .meu-nome {
+    color: #222;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    font-weight: bold;
+    letter-spacing: 2px;
+    position: absolute;
+    top: 47%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .imagem-rosto {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    border: 3px solid #808080;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
+  }
+  .dropping-texts {
+    position: absolute;
+    top: 58%;
+    left: 58%;
+    transform: translate(-50%, -50%);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.027);
+  }
+
+  .container-retangulos {
+    display: none;
+    /* display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: clamp(10px, 2vw, 20px);
+    margin-top: 40px;
+    padding: 0 20px; */
+  }
+  .mini-retangulo {
+    display: none;
+  }
+}
