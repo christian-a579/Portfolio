@@ -1,16 +1,94 @@
 /* Fonte Roboto */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap");
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+.logo {
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+  background: #23232e;
+  height: 8vh;
+}
+
+main {
+  background: url("bg.jpg") no-repeat center center;
+  background-size: cover;
+  height: 92vh;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+}
+
+.nav-list li {
+  letter-spacing: 3px;
+  margin-left: 32px;
+}
+
+.mobile-menu {
+  display: none;
+  cursor: pointer;
+}
+
+.mobile-menu div {
+  width: 32px;
+  height: 2px;
+  background: #fff;
+  margin: 8px;
+  transition: 0.3s;
+}
+.mobile-menu.active .line1 {
+  transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+  opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+  transform: rotate(45deg) translate(-5px, -7px);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 /* Configuração da Minha foto */
 .imagem-rosto {
-  width: clamp(150px, 20vw, 250px);
-  height: clamp(150px, 20vw, 250px);
+  width: clamp(200px, 30vw, 350px);
+  height: clamp(200px, 30vw, 350px);
   object-fit: cover;
   object-position: -10% 80%;
   border-radius: 50%;
   border: 3px solid #808080;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  margin: 0 auto;
 }
 
 /* =========================
@@ -77,7 +155,7 @@ main {
   top: 0;
   left: 0;
   width: 100%;
-  background: rgba(0, 51, 102, 0);
+  background: rgba(177, 177, 177, 0.13);
   z-index: 1000;
   transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -91,6 +169,8 @@ main {
   gap: 20px;
   width: 100%;
   padding: 20px;
+  min-height: 100vh;
+  margin-left: 1300px;
 }
 
 .menu-superior ul {
@@ -118,7 +198,7 @@ main {
 }
 
 /* Configuração das Logos do menu superior */
-.logo-gmail {
+/* .logo-gmail {
   width: clamp(30px, 4vw, 38px);
   height: clamp(30px, 4vw, 38px);
 }
@@ -131,10 +211,10 @@ main {
 .logo-linkedin {
   width: clamp(25px, 3vw, 30px);
   height: clamp(25px, 3vw, 30px);
-}
+} */
 
 /* Configuração dos Cards de Informação */
-.container-retangulos {
+/* .container-retangulos {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -155,7 +235,7 @@ main {
   justify-content: center;
   transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   box-sizing: border-box;
-}
+} */
 
 /* =========================
    MEDIA QUERIES (RESPONSIVIDADE)
@@ -219,9 +299,6 @@ main {
   }
   .meu-nome {
     font-size: clamp(0.9rem, 5vw, 1.2rem);
-  .text-carousel {
-    top: 100px;
-    left: auto;
   }
   .dropping-texts {
     width: clamp(10ch, 80vw, 14ch);
@@ -261,13 +338,13 @@ main {
   }
 } */
 
-.mini-retangulo:hover {
+/* .mini-retangulo:hover {
   transform: perspective(500px) rotateY(8deg) rotateX(6deg) scale(1.2);
   box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3);
-}
+} */
 
 /* Configuração do retangulo interno */
-.retangulo-interno {
+/* .retangulo-interno {
   width: 100%;
   height: 100%;
   background: rgba(255, 255, 255, 0.7);
@@ -278,7 +355,7 @@ main {
   align-items: center;
   justify-content: center;
   transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-}
+} */
 
 /* Botão de toggle de tema */
 .theme-toggle {
@@ -317,13 +394,13 @@ body.dark-mode {
   color: #fff;
 }
 
-body.dark-mode .mini-retangulo {
+/* body.dark-mode .mini-retangulo {
   background: rgba(255, 255, 255, 0.1);
 }
 
 body.dark-mode .retangulo-interno {
-  background: rgba(0, 0, 0, 0.3);
-}
+  background: rgba(0, 0, 0, 0.3); */
+/* } */
 
 body.dark-mode .menu-superior {
   background: rgba(255, 255, 255, 0);
@@ -369,101 +446,29 @@ body.theme-transition::before {
   height: 100vh;
 }
 
-/* Cabeçalho para página responsiva apartir de 1900px*/
-@media screen and (max-width: 1900px) {
-  body {
-    overflow: auto !important;
-    min-height: auto !important;
-    height: auto !important;
-    display: block !important;
-    justify-content: normal !important;
-    align-items: normal !important;
-  }
-
-  /* Container flex principal - apenas quando tela menor */
-  .flex.responsive {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
-    gap: 30px !important;
-    width: 100% !important;
-    min-height: 100vh !important;
-    padding: 50px 20px !important;
-    position: relative !important;
-  }
-
-  /* Reset da imagem - apenas quando tela menor */
-  .flex.responsive .imagem-rosto {
-    position: relative !important;
-    top: -100px !important;
-    left: -20px !important;
-    margin: 0 !important;
-    margin-top: 50px !important;
-    width: 200px !important;
-    height: 200px !important;
-  }
-
-  /* Reset do texto - apenas quando tela menor */
-  .flex.responsive .text-carousel {
-    position: relative !important;
-    top: -120px !important;
-    left: -20px !important;
-    margin: 0 !important;
-    text-align: center !important;
-    font-size: 20px;
-  }
-
-  .flex {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    top: -50px;
-  }
-
-  /* Container dos retângulos - APENAS quando tela menor */
-  .container-retangulos.responsive {
-    margin-top: -240px !important;
-    width: 100% !important;
-    display: flex !important;
-    flex-wrap: wrap !important;
-    justify-content: center !important;
-    align-items: center !important;
-    gap: 60px !important;
-  }
-
-  /* Retângulos individuais - APENAS quando tela menor */
-  .mini-retangulo.responsive {
-    width: 280px !important;
-    max-width: 280px !important;
-    height: 250px !important;
-    margin: 0 !important;
-    flex-shrink: 0 !important;
-  }
-}
-
 /* Nome Destaque */
-.nome-container {
+/* .nome-container {
   margin-bottom: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} */
 
-.meu-nome {
+/* .meu-nome {
   color: #222;
   font-size: clamp(1.5rem, 4vw, 2.5rem);
   font-weight: bold;
   letter-spacing: 2px;
-}
+  margin-left: 10px;
+} */
 
 /* =========================
    CARROSSEL ANIMADO
    ========================= */
 .carrossel-container {
   margin-bottom: 24px;
+  margin-left: -1500px;
+  margin-top: -60px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -531,7 +536,7 @@ body.theme-transition::before {
 /* =========================
    CARDS E RETÂNGULOS
    ========================= */
-.mini-retangulo:hover {
+/* .mini-retangulo:hover {
   transform: perspective(500px) rotateY(8deg) rotateX(6deg) scale(1.2);
   box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3);
 }
@@ -547,4 +552,4 @@ body.theme-transition::before {
   align-items: center;
   justify-content: center;
   transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-}
+} */
